@@ -8,12 +8,72 @@
 </head>
 <body>
   <main class="project-page">
-    <section class="project-page-hero">
-      <p class="project-page-kicker">Проект</p>
-      <h1>Дом у озера</h1>
-      <p class="project-page-note">Страница проекта подготовлена. Сюда позже можно будет добавить все изображения, планы и описание.</p>
-      <a class="project-page-back" href="index.html">Вернуться на главную</a>
+    <section class="project-page-shell">
+      <h1 class="project-page-title">Дом у озера</h1>
+
+      <div class="project-layout">
+        <div class="project-plan-viewer">
+          <button class="project-plan-button" type="button" id="plan-prev" aria-label="Предыдущий план">&#8249;</button>
+          <div class="project-plan-column">
+            <div class="project-plan-stage">
+              <img id="plan-image" src="дом у озера/plan_1/0.png" alt="План первого этажа проекта Дом у озера">
+            </div>
+            <p class="project-floor-label" id="plan-label">План первого этажа</p>
+          </div>
+          <button class="project-plan-button" type="button" id="plan-next" aria-label="Следующий план">&#8250;</button>
+        </div>
+
+        <aside class="project-info">
+          <h2>Общие сведения</h2>
+          <div class="project-info-list">
+            <p><span>Объект:</span> частный дом</p>
+            <p><span>Кол-во этажей:</span> 2 этажа</p>
+            <p><span>Общая площадь:</span> 154,66 м²</p>
+            <p><span>Сроки вып-ния проекта:</span> проект выполнен за 3,5 месяца 2025 г.</p>
+            <p><span>Стадия:</span> реализация 2026 г.</p>
+          </div>
+        </aside>
+      </div>
+
+      <a class="project-page-back" href="index.html#project-dom-u-ozera">Вернуться на главную</a>
     </section>
   </main>
+
+  <script>
+    const plans = [
+      {
+        src: "дом у озера/plan_1/0.png",
+        label: "План первого этажа",
+        alt: "План первого этажа проекта Дом у озера"
+      },
+      {
+        src: "дом у озера/plan_2/0.png",
+        label: "План второго этажа",
+        alt: "План второго этажа проекта Дом у озера"
+      }
+    ];
+
+    let currentPlanIndex = 0;
+
+    const planImage = document.getElementById("plan-image");
+    const planLabel = document.getElementById("plan-label");
+    const prevButton = document.getElementById("plan-prev");
+    const nextButton = document.getElementById("plan-next");
+
+    function renderPlan(index) {
+      const plan = plans[index];
+      planImage.src = plan.src;
+      planImage.alt = plan.alt;
+      planLabel.textContent = plan.label;
+    }
+
+    function showNextPlan(step) {
+      currentPlanIndex = (currentPlanIndex + step + plans.length) % plans.length;
+      renderPlan(currentPlanIndex);
+    }
+
+    prevButton.addEventListener("click", () => showNextPlan(-1));
+    nextButton.addEventListener("click", () => showNextPlan(1));
+  </script>
 </body>
 </html>
