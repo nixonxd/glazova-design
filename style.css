@@ -349,6 +349,21 @@ a {
   color: #1b140f;
 }
 
+.pricing-unit {
+  font-family: "Viaoda", serif;
+  font-size: 0.82em;
+  font-weight: 400;
+}
+
+.pricing-unit-power,
+.pricing-note-power {
+  display: inline-block;
+  font-size: 0.7em;
+  line-height: 1;
+  vertical-align: super;
+  font-weight: 400;
+}
+
 .pricing-note {
   margin: -8px 0 4px;
   padding-left: clamp(0rem, 1vw, 0.5rem);
