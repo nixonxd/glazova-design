@@ -373,6 +373,61 @@ a {
   color: rgba(95, 84, 73, 0.95);
 }
 
+.contacts-section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.contacts-section h2 {
+  margin: 0 0 44px;
+  text-align: center;
+  font-family: "Custodia Deco", serif;
+  font-size: clamp(2.8rem, 2.2rem + 2vw, 5rem);
+  font-weight: 400;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.contact-card {
+  display: flex;
+  min-height: 210px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 26px 20px;
+  border: 1px solid rgba(120, 99, 83, 0.18);
+  background: rgba(255, 252, 247, 0.44);
+  box-shadow: 0 14px 32px rgba(43, 28, 16, 0.06);
+  text-align: center;
+}
+
+.contact-card p {
+  margin: 0;
+  font-family: "Viaoda", serif;
+  font-size: clamp(1.15rem, 1rem + 0.42vw, 1.55rem);
+  line-height: 1.2;
+  color: rgba(25, 21, 17, 0.72);
+}
+
+.contact-card a {
+  font-family: "Marianna", cursive;
+  font-size: clamp(2rem, 1.35rem + 1.35vw, 3rem);
+  line-height: 0.9;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-card a:hover,
+.contact-card a:focus-visible {
+  color: #7b6048;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -560,6 +615,21 @@ a {
   font-size: clamp(1.2rem, 1.05rem + 0.45vw, 1.6rem);
   line-height: 1.35;
   color: rgba(46, 31, 20, 0.8);
+}
+
+.project-plan-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: "Marianna", cursive;
+  font-size: clamp(2rem, 1.5rem + 1.2vw, 3rem);
+  line-height: 0.9;
+  text-decoration: none;
+  color: #17110d;
+}
+
+.project-plan-link:hover,
+.project-plan-link:focus-visible {
+  color: #a82614;
 }
 
 .project-plan-button {
@@ -794,6 +864,10 @@ footer {
     gap: 32px;
   }
 
+  .contacts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .project-slot {
     display: none;
   }
@@ -925,5 +999,14 @@ footer {
   .pricing-note {
     margin-top: -2px;
     padding-left: 0;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-card {
+    min-height: 180px;
   }
 }
