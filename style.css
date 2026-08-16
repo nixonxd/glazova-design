@@ -611,18 +611,18 @@ a {
 .project-plan-placeholder p {
   margin: 0;
   max-width: 18rem;
-  font-family: "Viaoda", serif;
-  font-size: clamp(1.2rem, 1.05rem + 0.45vw, 1.6rem);
-  line-height: 1.35;
+  font-family: "Custodia Deco", serif;
+  font-size: clamp(1.35rem, 1.15rem + 0.4vw, 1.8rem);
+  line-height: 1.1;
   color: rgba(46, 31, 20, 0.8);
 }
 
 .project-plan-link {
   display: inline-block;
   margin-top: 18px;
-  font-family: "Marianna", cursive;
-  font-size: clamp(2rem, 1.5rem + 1.2vw, 3rem);
-  line-height: 0.9;
+  font-family: "Custodia Deco", serif;
+  font-size: clamp(1.35rem, 1.15rem + 0.4vw, 1.8rem);
+  line-height: 1.1;
   text-decoration: none;
   color: #17110d;
 }
